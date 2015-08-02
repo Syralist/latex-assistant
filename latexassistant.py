@@ -719,7 +719,7 @@ class LaTeXAssistant(wx.Frame):
             self.p4.outputtext.AppendText("\n\t]{scrbook}")
         else:
             self.p4.outputtext.AppendText("\n\t]{%s}"%(self.p1.customclass.GetValue()))
-        self.p4.outputtext.AppendText("\n\\usepackage{selinput}\n\\SelectInputMappings{adieresis={ä}, germandbls={ß},Euro={€}}")
+        self.p4.outputtext.AppendText("\n\\usepackage{selinput}\n\\SelectInputMappings{adieresis={ä}, germandbls={ß}}")
         self.p4.outputtext.AppendText("\n\\usepackage[T1]{fontenc}")
         self.p4.outputtext.AppendText("\n\\usepackage[")
         if self.p1.langgerman.IsChecked():
