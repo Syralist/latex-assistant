@@ -612,7 +612,7 @@ class HelpWindow(wx.Dialog):
             style=wx.DEFAULT_DIALOG_STYLE|wx.THICK_FRAME|wx.RESIZE_BORDER|
                 wx.TAB_TRAVERSAL)
         self.hwin = HtmlWindow(self, -1, size=(600,700))
-        self.hwin.LoadFile(os.path.dirname(sys.argv[0])+'\\hilfe.html')
+        self.hwin.LoadFile(os.path.join(os.path.dirname(sys.argv[0]),'hilfe.html'))
         self.btn = self.hwin.FindWindowById(wx.ID_OK)
         self.irep = self.hwin.GetInternalRepresentation()
         #self.hwin.SetSize((self.irep.GetWidth()+25, self.irep.GetHeight()+25))
@@ -624,7 +624,7 @@ class LaTeXAssistant(wx.Frame):
     def __init__(self, parent, id, title):
         wx.Frame.__init__(self, parent, id, title, size=(600, 700))
         #create icon
-        self.icon = wx.Icon(os.path.dirname(sys.argv[0])+'pencil.ico', wx.BITMAP_TYPE_ICO)
+        self.icon = wx.Icon(os.path.join(os.path.dirname(sys.argv[0]),'pencil.ico'), wx.BITMAP_TYPE_ICO)
         self.SetIcon(self.icon)
 
         #create menu
